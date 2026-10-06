@@ -1,8 +1,7 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { DatlyLogo } from './DatlyLogo';
 
 export function Navbar() {
-  const { pathname } = useLocation();
 
   return (
     <nav className="w-full flex items-center justify-between py-6 px-6 md:px-12 max-w-7xl mx-auto z-10 relative">
