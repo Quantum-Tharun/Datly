@@ -41,7 +41,7 @@ class AnalyticsEngine:
         # Execute the mapped function deterministically
         try:
             # Apply filters first for all operations
-            if "filters" in plan and plan["filters"]:
+            if plan.get("filters"):
                 from .filters import apply_filters
                 df = apply_filters(df, plan["filters"])
                 

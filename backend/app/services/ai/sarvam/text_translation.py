@@ -36,7 +36,7 @@ def translate_text(text: str, source_language_code: str, target_language_code: s
             
         return translated_text
         
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         logger.error(f"Sarvam Text Translate Error: {e!s}")
         # Soft fallback to original text if translation fails
         return text

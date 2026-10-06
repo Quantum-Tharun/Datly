@@ -1,10 +1,14 @@
 import pandas as pd
 import pytest
 
-from app.models.analysis_plan import AnalysisPlan, Operation, VisualizationType, PlanVisualization
+from app.models.analysis_plan import (
+    AnalysisPlan,
+    Operation,
+    PlanVisualization,
+    VisualizationType,
+)
 from app.services.analytics.engine import execute_plan
 from app.services.visualization.chart_selector import VisualizationSelector
-from external_modules.datly_analytics_module.analytics.models import AnalyticsError
 
 
 def get_test_df():

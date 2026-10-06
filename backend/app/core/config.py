@@ -8,6 +8,14 @@ class Settings(BaseSettings):
     NVIDIA_BASE_URL: str = "https://integrate.api.nvidia.com/v1"
     MAX_UPLOAD_SIZE_MB: int = 50
     ALLOWED_FILE_TYPES: str = "csv,xlsx,xls,json"
+    CORS_ORIGINS: str = ""
+
+    @property
+    def cors_origins_list(self) -> list[str]:
+        origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
+        if self.CORS_ORIGINS:
+            origins.extend([origin.strip() for origin in self.CORS_ORIGINS.split(",") if origin.strip()])
+        return origins
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

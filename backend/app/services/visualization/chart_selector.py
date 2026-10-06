@@ -79,9 +79,8 @@ class VisualizationSelector:
         
         # If no metric column is defined, but data is present, default to table
         is_count = False
-        if plan.operation == Operation.aggregate:
-            if getattr(plan, "aggregation", None) == "count" or getattr(plan, "aggregations", None) and "count" in plan.aggregations:
-                is_count = True
+        if plan.operation == Operation.aggregate and (getattr(plan, "aggregation", None) == "count" or getattr(plan, "aggregations", None) and "count" in plan.aggregations):
+            is_count = True
                 
         if not metric and not is_count:
              return VisualizationSpec(type=VisualizationType.table, title="Analysis Result")
