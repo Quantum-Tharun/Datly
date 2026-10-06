@@ -22,25 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Python
-__pycache__/
-*.py[cod]
-*.class
-.venv/
-venv/
-ENV/
-
-# Secrets
-.env
-.env.*
-!.env.example
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Temporary files
-uploads/
-

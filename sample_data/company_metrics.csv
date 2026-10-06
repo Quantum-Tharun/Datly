@@ -1,0 +1,9 @@
+department,revenue,headcount,region
+Sales,500000,20,North America
+Engineering,0,150,North America
+Marketing,100000,15,North America
+HR,0,5,North America
+Sales,600000,22,Europe
+Engineering,0,160,Europe
+Marketing,150000,18,Europe
+HR,0,5,Europe

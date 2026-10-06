@@ -1,0 +1,12 @@
+{
+    "dataset_rows": 100000,
+    "query_accuracy": "100%",
+    "sequential_queries": 100,
+    "p50_latency_sec": 0.0074,
+    "p95_latency_sec": 0.014,
+    "p99_latency_sec": 0.0183,
+    "concurrent_queries": 200,
+    "concurrency_level": 10,
+    "throughput_queries_per_sec": 216.0,
+    "total_time_concurrent_sec": 0.9259
+}
